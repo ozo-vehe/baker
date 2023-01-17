@@ -14,7 +14,7 @@
 </script>
 
 <template>
-  <nav class="absolute w-screen z-30 bg-gray-900 text-gray-200 flex justify-between items-center px-12 py-8">
+  <nav class="absolute w-full z-30 bg-gray-900/40 text-gray-200 flex justify-between items-center px-12 py-8">
     <RouterLink to="/home">
       <h1 class="text-orange-200 text-orange-400 text-4xl font-bold">Baker</h1>
     </RouterLink>

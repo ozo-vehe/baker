@@ -14,12 +14,12 @@
 </script>
 
 <template>
-  <nav class="absolute w-full z-30 bg-gray-900/40 text-gray-200 flex justify-between items-center px-12 py-8">
+  <nav class="absolute w-full z-30 bg-gray-900/40 text-gray-200 flex flex-wrap justify-between items-center px-12 py-8">
     <RouterLink to="/home">
       <h1 class="text-orange-200 text-orange-400 text-4xl font-bold">Baker</h1>
     </RouterLink>
     <div>
-      <ul class="flex gap-10">
+      <ul class="flex flex-wrap gap-10">
         <li
           class="px-2 text-lg py-1 capitalize rounded active"
           v-for="link in links">

@@ -5,7 +5,7 @@
   <main class="px-24 mb-16">
     <h1 class="text-center text-2xl mt-8 mb-2">About us</h1>
     <h3 class="text-center text-6xl font-bold uppercase mb-32">Welcome to baker</h3>
-    <div class="flex flex-wrap items-start gap-x-4 gap-y-32 justify-between">
+    <div class="flex flex-wrap items-start gap-x-32 gap-y-32 justify-center">
       <div class="aboutImage w-350 relative border rounded h-400 ml-16 p-16">
         <!-- <video class="h-full" src="../assets/videos/about_section.mp4" autoplay loop></video> -->
         <img class="w-60 h-70 absolute -top-10 -left-16 rounded-lg" src="../assets/images/about-1.jpg" alt="About us">

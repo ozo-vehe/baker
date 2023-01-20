@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Cassandra";
+  src: url("./font//CassandraPersonalUseRegular-3BjG.ttf");
+}
+
 body {
   padding: 0px;
   margin: 0px;

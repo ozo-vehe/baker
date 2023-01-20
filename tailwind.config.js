@@ -13,6 +13,9 @@ module.exports = {
         "450": "450px",
         "500": "500px",
         "550": "550px",
+      },
+      fontFamily: {
+        'cassandra': ['Cassandra']
       }
     },
   },

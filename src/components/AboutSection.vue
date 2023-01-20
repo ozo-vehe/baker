@@ -2,8 +2,8 @@
 </script>
 
 <template>
-  <main class="px-24 mb-16">
-    <h1 class="text-center text-2xl mt-8 mb-2">About us</h1>
+  <main class="px-24 mb-16 mt-16">
+    <h1 class="text-center text-2xl mt-8 mb-2 font-cassandra text-orange-400">About us</h1>
     <h3 class="text-center text-6xl font-bold uppercase mb-32">Welcome to baker</h3>
     <div class="flex flex-wrap items-start gap-x-32 gap-y-32 justify-center">
       <div class="aboutImage w-350 relative border rounded h-400 ml-16 p-16">

@@ -8,10 +8,10 @@
   const cakeCategories = reactive(["all", "birthday", "wedding", "custom"])
   const category = ref("all")
   const cakes = reactive([
-    { name: "Cake Sample 1", image: image1, price: 3, description: "Description of cake sample one", category: "birthday"},
-    { name: "Cake Sample 2", image: image2, price: 3, description: "Description of cake sample two", category: "custom"},
-    { name: "Cake Sample 3", image: image3, price: 3, description: "Description of cake sample three", category: "custom"},
-    { name: "Cake Sample 4", image: image4, price: 3, description: "Description of cake sample four", category: "wedding"},
+    { name: "Cake Sample 1", image: image1, price: 3, description: "Description of cake sample one", category: ["all", "birthday"]},
+    { name: "Cake Sample 2", image: image2, price: 3, description: "Description of cake sample two", category: ["all", "custom"]},
+    { name: "Cake Sample 3", image: image3, price: 3, description: "Description of cake sample three", category: ["all", "custom"]},
+    { name: "Cake Sample 4", image: image4, price: 3, description: "Description of cake sample four", category: ["all", "wedding"]},
   ])
 
   console.log(cakes);
@@ -23,13 +23,13 @@
 
 <template>
   <main class="px-24 my-36">
-    <h1 class="text-center text-2xl mt-8 mb-2">Menu & Pricing</h1>
+    <h1 class="font-cassandra text-orange-400 text-center text-2xl mt-8 mb-2">Menu & Pricing</h1>
     <h3 class="text-center text-6xl font-bold uppercase mb-16">Explore our cakes</h3>
     
-    <div class="cakeCategories flex flex-wrap items-center justify-center gap-x-8 gap-y-2 my-8">
+    <div class="cakeCategories flex flex-wrap items-center justify-center gap-x-8 gap-y-2 my-8 mb-16">
       <p
         :class="{active: cakeCategory == category}"
-        class="px-4 py-2 border border-orange-400 text-orange-400 rounded-md transition-all"
+        class="cursor-pointer px-4 py-2 border border-orange-400 text-orange-400 rounded-md transition-all"
         @click="changeCategory(cakeCategory)"
         v-for="(cakeCategory, index) in cakeCategories"
         :key="index"
@@ -38,17 +38,23 @@
       </p>
     </div>
 
-    <div class="border border-black w-full box-border flex flex-wrap justify-center gap-x-16 gap-y-8">
-      <div v-for="cake in cakes" class="overflow-hidden shadow rounded-lg box-border flex w-500 h-48">
-        <div class="cakeImage w-2/3 h-full border overflow-hidden">
-          <img class="h-full w-full" :src="cake.image" alt="Cake Image">
+    <div class="w-full box-border flex flex-wrap justify-center gap-x-16 gap-y-8">
+      <template
+        v-for="cake in cakes"
+      >
+        <div v-if="cake.category.includes(category)" class="overflow-hidden shadow rounded-lg box-border w-300 h-400">
+          <div class="cakeImage w-full h-2/3 border overflow-hidden">
+            <img class="w-full h-full" :src="cake.image" alt="Cake Image">
+          </div>
+          <div class="relative w-full aboutCake px-4 pt-2">
+            <h3 class="text-2xl flex items-center justify-between mb-4">
+              <span class="font-bold">{{ cake.name }}</span>
+              <span class="text-orange-400 font-bold text-4xl">${{ cake.price }}</span>
+            </h3>
+            <p class="text-lg">{{ cake.description }}</p>
+          </div>
         </div>
-        <div class="relative aboutCake px-4 pt-2 w-2/3">
-          <h3 class="text-2xl font-bold mb-4">{{ cake.name }}</h3>
-          <p class="text-xl">{{ cake.description }}</p>
-          <p class="text-orange-500 text-3xl font-bold mt-2">${{ cake.price }}</p>
-        </div>
-      </div>
+      </template>
     </div>
   </main>
 </template>

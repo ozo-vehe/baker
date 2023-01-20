@@ -12,6 +12,8 @@
     { name: "Cake Sample 2", image: image2, price: 3, description: "Description of cake sample two", category: ["all", "custom"]},
     { name: "Cake Sample 3", image: image3, price: 3, description: "Description of cake sample three", category: ["all", "custom"]},
     { name: "Cake Sample 4", image: image4, price: 3, description: "Description of cake sample four", category: ["all", "wedding"]},
+    { name: "Cake Sample 4", image: image4, price: 3, description: "Description of cake sample four", category: ["all", "wedding"]},
+    { name: "Cake Sample 4", image: image4, price: 3, description: "Description of cake sample four", category: ["all", "wedding"]},
   ])
 
   console.log(cakes);
@@ -24,7 +26,7 @@
 <template>
   <main class="px-24 my-36">
     <h1 class="font-cassandra text-orange-400 text-center text-2xl mt-8 mb-2">Menu & Pricing</h1>
-    <h3 class="text-center text-6xl font-bold uppercase mb-16">Explore our cakes</h3>
+    <h3 class="text-center text-5xl font-bold uppercase mb-16">Explore our cakes</h3>
     
     <div class="cakeCategories flex flex-wrap items-center justify-center gap-x-8 gap-y-2 my-8 mb-16">
       <p
@@ -44,7 +46,7 @@
       >
         <div v-if="cake.category.includes(category)" class="overflow-hidden shadow rounded-lg box-border w-300 h-400">
           <div class="cakeImage w-full h-2/3 border overflow-hidden">
-            <img class="w-full h-full" :src="cake.image" alt="Cake Image">
+            <img class="w-full h-full object-cover" :src="cake.image" alt="Cake Image">
           </div>
           <div class="relative w-full aboutCake px-4 pt-2">
             <h3 class="text-2xl flex items-center justify-between mb-4">

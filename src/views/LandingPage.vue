@@ -5,6 +5,7 @@
   import ServicesSection from '../components/ServicesSection.vue';
   import BakersSection from '../components/BakersSection.vue';
   import TestimonySection from '../components/TestimonySection.vue';
+  import FooterSection from '../components/FooterSection.vue';
 </script>
 
 <template>
@@ -15,5 +16,6 @@
     <ServicesSection />
     <BakersSection />
     <TestimonySection />
+    <FooterSection />
   </main>
 </template>

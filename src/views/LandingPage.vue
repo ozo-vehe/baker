@@ -9,13 +9,20 @@
 </script>
 
 <template>
-  <main>
-    <HeroSection />
-    <AboutSection />
-    <ProductSection />
-    <ServicesSection />
-    <BakersSection />
-    <TestimonySection />
-    <FooterSection />
-  </main>
+  <HeroSection />
+  <AboutSection />
+  <ProductSection />
+  <ServicesSection />
+  <BakersSection />
+  <TestimonySection />
+  <FooterSection />
 </template>
+
+<style scoped>
+  @media screen and (max-width: 700px) {
+    main {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+</style>
